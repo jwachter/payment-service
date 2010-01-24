@@ -1,5 +1,5 @@
 $(document).ready(function(){
-	$("#pin").hide();	
+	$("#pinContainer").hide();	
 });
 
 $(document).ready(function(){
@@ -7,13 +7,13 @@ $(document).ready(function(){
 		var selection = $("select#type option:selected").val();
 		
 		if(selection == "mastercard" || selection == "visa"){
-			$("#securityCode").show();
-			$("#issuer").show();
-			$("#pin").hide();
+			$("#securityCodeContainer").show();
+			$("#issuerContainer").show();
+			$("#pinContainer").hide();
 		} else if(selection == "ec"){
-			$("#securityCode").hide();
-			$("#issuer").hide();
-			$("#pin").show();
+			$("#securityCodeContainer").hide();
+			$("#issuerContainer").hide();
+			$("#pinContainer").show();
 		}
 	});
 });

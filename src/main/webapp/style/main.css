@@ -45,3 +45,15 @@ p.success {
 	text-align:center;
 	font-size:larger;
 }
+
+div#searchcontainer {
+	background: black url('/media/background.png');
+	width: 900px;
+	height: 600px;
+	margin: 50px auto;
+}
+
+div#paymentinfo {
+	font-size:x-large;
+	font-weight:bold;
+}

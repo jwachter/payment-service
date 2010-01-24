@@ -4,6 +4,9 @@
 		<script src="/scripts/billing.js"></script>
 	</head>
 	<div id="billingForm">
+		<div id="paymentinfo">
+			<lift:PaymentProcess.billing />
+		</div>
 		<form method="post" action="/validate.html">
 			<div class="formItemContainer">
 				<label class="label" for="type">Card Type</label>
@@ -25,15 +28,15 @@
 				<label class="label" for="expire">Expire Date</label>
 				<input class="field" type="text" value="" id="expire" name="expire"/>
 			</div>
-			<div class="formItemContainer">
+			<div id="securityCodeContainer" class="formItemContainer">
 				<label class="label" for="securityCode">Security Code</label>
 				<input class="field" type="text" value="" id="securityCode" name="securityCode"/>
 			</div>
-			<div class="formItemContainer">
+			<div id="issuerContainer" class="formItemContainer">
 				<label class="label" for="issuer">Issuer</label>
 				<input class="field" type="text" value="" id="issuer" name="issuer"/>
 			</div>
-			<div class="formItemContainer">
+			<div id="pinContainer" class="formItemContainer">
 				<label class="label" for="pin">PIN</label>
 				<input class="field" type="password" value="" id="pin" name="pin"/>
 			</div>

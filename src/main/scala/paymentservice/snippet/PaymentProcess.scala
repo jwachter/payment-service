@@ -88,6 +88,13 @@ class PaymentProcess{
 	}
  
 	//
+	// Additional Step 2 methods
+	//
+	def billing(xhtml:NodeSeq):NodeSeq={
+	  <p><strong>{TicketHolder.is.open_!.payee}</strong> wants you to pay <strong>{TicketHolder.is.open_!.price}</strong> for item <strong>{TicketHolder.is.open_!.id}</strong></p>
+	}
+ 
+	//
 	// Step 3: validate the billing methods data.
 	//
 	def validate(xhtml:NodeSeq):NodeSeq = {
