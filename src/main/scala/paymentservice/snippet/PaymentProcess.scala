@@ -123,7 +123,7 @@ class PaymentProcess{
 	  }
 	  val issuer = S.param("issuer") match {
 		  case Full(n) if !n.isEmpty => n
-		  case _=> S.error("No issuer information. Please enter again.");S.redirectTo("/billing.html") 
+		  case _=> if(cardType == "mastercard" || cardType == "visa"){ S.error("No issuer information. Please enter again.");S.redirectTo("/billing.html") }else{""}
 	  }
 	  val pin = S.param("pin") match {
 		  case Full(n) if !n.isEmpty => n
