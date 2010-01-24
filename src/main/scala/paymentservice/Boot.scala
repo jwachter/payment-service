@@ -1,4 +1,4 @@
-package bootstrap.liftweb
+package paymentservice
 
 import _root_.net.liftweb.util._
 import _root_.net.liftweb.http._
@@ -10,14 +10,12 @@ import Helpers._
   * A class that's instantiated early and run.  It allows the application
   * to modify lift's environment
   */
-class Boot {
+class Boot extends Bootable{
   def boot {
+    LiftRules.early append { _ setCharacterEncoding "UTF-8" }
+    
     // where to search snippet
     LiftRules.addToPackages("paymentservice")
-
-    // Build SiteMap
-    val entries = Menu(Loc("Home", List("index"), "Home")) :: Nil
-    LiftRules.setSiteMap(SiteMap(entries:_*))
   }
 }
 

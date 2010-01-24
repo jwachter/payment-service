@@ -1,0 +1,26 @@
+<lift:surround with="default" at="content">
+	<head>
+		<script src="/scripts/billing.js"></script>
+	</head>
+	<form method="post" action="/validate.html">
+		<label for="type">Card Type</label>
+		<select name="type" id="type">
+			<option value="mastercard" selected="selected">Master Card</option>
+			<option value="visa">VISA</option>
+			<option value="ec">Electronic Cash</option>
+		</select>
+		<label for="number">Card Number</label>
+		<input type="text" value="" id="number" name="number"/>
+		<label for="holder">Holder Name</label>
+		<input type="text" value="" id="holder" name="holder"/>
+		<label for="expire">Expire Date</label>
+		<input type="text" value="" id="expire" name="expire"/>
+		<label for="securityCode">Security Code</label>
+		<input type="text" value="" id="securityCode" name="securityCode"/>
+		<label for="issuer">Issuer</label>
+		<input type="text" value="" id="issuer" name="issuer"/>
+		<label for="pin">PIN</label>
+		<input type="password" value="" id="pin" name="pin"/>
+		<input type="submit" value="submit" />
+	</form>
+</lift:surround>
