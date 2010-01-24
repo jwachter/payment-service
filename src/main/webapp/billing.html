@@ -1,26 +1,45 @@
 <lift:surround with="default" at="content">
 	<head>
+		<!-- JQuery code for the Form -->
 		<script src="/scripts/billing.js"></script>
 	</head>
-	<form method="post" action="/validate.html">
-		<label for="type">Card Type</label>
-		<select name="type" id="type">
-			<option value="mastercard" selected="selected">Master Card</option>
-			<option value="visa">VISA</option>
-			<option value="ec">Electronic Cash</option>
-		</select>
-		<label for="number">Card Number</label>
-		<input type="text" value="" id="number" name="number"/>
-		<label for="holder">Holder Name</label>
-		<input type="text" value="" id="holder" name="holder"/>
-		<label for="expire">Expire Date</label>
-		<input type="text" value="" id="expire" name="expire"/>
-		<label for="securityCode">Security Code</label>
-		<input type="text" value="" id="securityCode" name="securityCode"/>
-		<label for="issuer">Issuer</label>
-		<input type="text" value="" id="issuer" name="issuer"/>
-		<label for="pin">PIN</label>
-		<input type="password" value="" id="pin" name="pin"/>
-		<input type="submit" value="submit" />
-	</form>
+	<div id="billingForm">
+		<form method="post" action="/validate.html">
+			<div class="formItemContainer">
+				<label class="label" for="type">Card Type</label>
+				<select class="field" name="type" id="type">
+					<option value="mastercard" selected="selected">Master Card</option>
+					<option value="visa">VISA</option>
+					<option value="ec">Electronic Cash</option>
+				</select>
+			</div>
+			<div class="formItemContainer">
+				<label class="label" for="number">Card Number</label>
+				<input class="field" type="text" value="" id="number" name="number"/>
+			</div>
+			<div class="formItemContainer">
+				<label class="label" for="holder">Holder Name</label>
+				<input class="field" type="text" value="" id="holder" name="holder"/>
+			</div>
+			<div class="formItemContainer">
+				<label class="label" for="expire">Expire Date</label>
+				<input class="field" type="text" value="" id="expire" name="expire"/>
+			</div>
+			<div class="formItemContainer">
+				<label class="label" for="securityCode">Security Code</label>
+				<input class="field" type="text" value="" id="securityCode" name="securityCode"/>
+			</div>
+			<div class="formItemContainer">
+				<label class="label" for="issuer">Issuer</label>
+				<input class="field" type="text" value="" id="issuer" name="issuer"/>
+			</div>
+			<div class="formItemContainer">
+				<label class="label" for="pin">PIN</label>
+				<input class="field" type="password" value="" id="pin" name="pin"/>
+			</div>
+			<div class="formButtonContainer">
+				<input class="button" type="submit" value="Submit Payment" />
+			</div>
+		</form>
+	</div>
 </lift:surround>

@@ -1,0 +1,47 @@
+body {
+	background-color:white;
+}
+
+div#logo {
+	margin:0 auto;
+	width: 600px
+}
+
+div#messages {
+	margin:0 auto;
+	width: 600px;
+}
+
+div#content {
+	margin:0 auto;
+	width: 400px;
+}
+
+div.formItemContainer {
+	
+}
+
+label.label {
+	float:left;
+	width:130px;
+	text-align:right;
+	text-transform:uppercase;
+}
+
+input.field {
+	width:200px;
+}
+
+div.formItemContainer {
+	clear:left;
+}
+
+div.formButtonContainer {
+	text-align:center;
+}
+
+p.success {
+	width: 100%;
+	text-align:center;
+	font-size:larger;
+}
